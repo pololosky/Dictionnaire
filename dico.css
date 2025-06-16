@@ -33,8 +33,12 @@ header {
   align-items: center;
   padding: 15px;
 }
-.droite {
+.droite{
   font-size: 20px;
+}
+.droite img{
+  width: 150px;
+  height: auto;
 }
 .gauche {
   display: flex;
@@ -191,12 +195,12 @@ footer a {
   body {
   background: linear-gradient(
     180deg,
-    var(--var-blanc) 20%,
+    var(--var-blanc) 15%,
     var(--var-back1) 100%
   );
 }
-  .droite {
-    font-size: 15px;
+  .droite img{
+    width: 110px;
   }
   .gauche {
     gap: 10px;
@@ -209,10 +213,11 @@ footer a {
   justify-content: center;
 }
 .titre {
-  margin-top: -20vh;
-  font-size: 25px;
+  /* margin-top: -20vh; */
+  font-size: 20px;
   text-align: center;
   letter-spacing: 2px;
+  color: var(--var-blanc);
 }
 .rechecher .form {
   display: flex;
