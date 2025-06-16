@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+html {
+  --var-back1: #7d4ffe;
+  --var-back2: #a98aff;
+  --var-blanc: #fff;
+}
+body {
+  font-family: "Abril Fatface";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(
+    180deg,
+    var(--var-blanc) 35%,
+    var(--var-back1) 100%
+  );
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.droite {
+  font-size: 20px;
+}
+.gauche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.gauche a {
+  box-shadow: 1px 2px 3px gray;
+  padding: 5px;
+  min-width: 150px;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  background-color: var(--var-back1);
+  color: var(--var-blanc);
+  transition: all 0.5s ease;
+}
+a:hover {
+  transform: scale(1.04);
+  background-color: var(--var-blanc);
+  color: var(--var-back1);
+}
+.titre {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.rechecher {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
+  gap: 10px;
+  flex-direction: column;
+}
+.rechecher .form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.rechecher .form input {
+  width: 600px;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  height: auto;
+  border: 1px solid gray;
+}
+.rechecher .form input:focus {
+  outline: none;
+  border: 2px solid #7d4ffe;
+}
+.rechecher .form button {
+  font-size: 20px;
+  font-family: "Abril Fatface";
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--var-back1);
+  color: var(--var-blanc);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.rechecher .form button:hover {
+  background-color: var(--var-back2);
+}
+#reponse {
+  display: none;
+  box-shadow: 1px 2px 5px white;
+  background-color: var(--var-back1);
+  color: var(--var-blanc);
+  width: 720px;
+  min-height: 50px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  animation: anime1 0.3s ease;
+}
+#image {
+  display: none;
+  box-shadow: 1px 2px 5px white;
+  background-color: var(--var-back1);
+  color: var(--var-blanc);
+  width: 720px;
+  min-height: 100px;
+  height: auto;
+  border-radius: 10px;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+  animation: anime1 0.3s ease;
+}
+#image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+@keyframes anime1 {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+footer {
+  display: flex;
+  padding: 10px;
+  margin-top: 20vh;
+  letter-spacing: 2px;
+  width: 100%;
+  justify-content: center;
+  color: var(--var-blanc);
+}
+footer a {
+  padding: 5px;
+  background-color: var(--var-back2);
+  color: var(--var-blanc);
+  border-radius: 10px;
+}
+@media screen and (max-width: 765px) {
+  body {
+  background: linear-gradient(
+    180deg,
+    var(--var-blanc) 20%,
+    var(--var-back1) 100%
+  );
+}
+  .droite {
+    font-size: 15px;
+  }
+  .gauche {
+    gap: 10px;
+    flex-direction:column ;
+  }
+  .gauche a {
+  padding: 2px;
+  min-width: 150px;
+  font-size: 15px;
+  justify-content: center;
+}
+.titre {
+  margin-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.rechecher .form {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.rechecher .form input {
+  width: 250px;
+  padding: 10px;
+  font-size: 25px;
+}
+.rechecher .form input:focus {
+  outline: none;
+  border: 2px solid #7d4ffe;
+}
+.rechecher .form button {
+  font-size: 15px;
+}
+.rechecher .form button:hover {
+  background-color: var(--var-back2);
+}
+#reponse {
+  display: none;
+  width: 355px;
+}
+#image {
+  width: 355px;
+}
+#image img {
+  width: 200px;
+}
+}
