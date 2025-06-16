@@ -22,7 +22,14 @@ function afficherDefinition(mot) {
   //envoie d'une requete get
   fetch(url)
     //on recupere en format json
-    .then((Response) => Response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status}`);
+        reponse.style.display = "flex";
+        reponse.innerHTML = `Definition introuvable`;
+      }
+      return response.json();
+    })
     .then((data) => {
       reponse.style.display = "flex";
       reponse.innerHTML = `Definition : ${data[0].meanings[0].definitions[0].definition}`;
