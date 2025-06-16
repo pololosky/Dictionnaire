@@ -24,9 +24,9 @@ function afficherDefinition(mot) {
     //on recupere en format json
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`Erreur HTTP: ${response.status}`);
         reponse.style.display = "flex";
         reponse.innerHTML = `Definition introuvable`;
+        throw new Error(`Erreur HTTP: ${response.status}`);
       }
       return response.json();
     })
@@ -57,7 +57,8 @@ function afficheImage(mot) {
       }
     })
     .catch((error) => {
-      console.error("Erreur lors de la récupération de l'image:", error);
-      alert("Une erreur est survenue lors du chargement de l'image");
+      return;
+      // console.error("Erreur lors de la récupération de l'image:", error);
+      // alert("Une erreur est survenue lors du chargement de l'image");
     });
 }
