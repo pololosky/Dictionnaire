@@ -244,4 +244,7 @@ footer a {
 #image img {
   width: 200px;
 }
+footer {
+  margin-top: 15vh;
+}
 }
